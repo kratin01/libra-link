@@ -7,6 +7,11 @@ const port = 3000;
 //middleware
 app.use(cors()); //it helps to connect the frontend and backend
 app.use(express.json()); //it helps to read the json data that is coming from the frontend
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 // app.get("/", (req, res) => {
 //   res.send("Hello World");
