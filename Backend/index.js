@@ -9,9 +9,9 @@ app.use(cors()); //it helps to connect the frontend and backend
 app.use(express.json()); //it helps to read the json data that is coming from the frontend
 
 
-// app.get("/", (req, res) => {
-//   res.send("Hello World");
-// });
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 //MongoDB Configurations
 
