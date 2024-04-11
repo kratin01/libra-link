@@ -37,7 +37,9 @@ async function run() {
     const booksCollection = client.db("BookInventory").collection("books");
 
     //Insert a book into the database using post request
-
+    app.get("/", (req, res) => {
+      res.send("Hello World");
+    });
     app.post("/upload-book", async (req, res) => {
       const data = req.body;
       // data?._id = new ObjectId();
