@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 const Manageyourbooks = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/get-books")
+    fetch(`${import.meta.env.VITE_API_URL}/get-books`)
       .then((res) => res.json())
       .then((data) => setBooks(data))
       .catch((err) => console.log(err));
   }, []);
 
   const handledelete = (id) => {
-    fetch(`http://localhost:3000/delete-book/${id}`,{
-      method:"DELETE"
+    fetch(`${import.meta.env.VITE_API_URL}/delete-book/${id}`, {
+      method: "DELETE",
     })
-    .then((res)=>res.json())
-    .then((data)=>{
-      if(data){
-        alert("Book Deleted Successfully")
-      }
-    })
-  }
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          alert("Book Deleted Successfully");
+        }
+      });
+  };
 
   return (
     <div>
@@ -90,10 +90,14 @@ const Manageyourbooks = () => {
                         Edit
                       </button>
                     </Link>
-                    <button onClick={()=> handledelete(book._id)} className=" bg-red-600 px-4 py-1 font-semibold text-white rounded-sm hover:bg-sky-600">Delete</button>
+                    <button
+                      onClick={() => handledelete(book._id)}
+                      className=" bg-red-600 px-4 py-1 font-semibold text-white rounded-sm hover:bg-sky-600"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
-               
               </tbody>
             );
           })}

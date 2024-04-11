@@ -7,12 +7,13 @@ const Shop = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/get-books")
+    fetch(`${import.meta.env.VITE_API_URL}/get-books`)
       .then((res) => res.json())
       .then((data) => {
         setBooks(data);
       });
   }, []);
+  console.log(import.meta.env.VITE_API_URL)
   return (
     <div className="mt-28 px-4 lg:px-24">
       <h2 className=" text-5xl font-bold text-center">All Books Are Here</h2>

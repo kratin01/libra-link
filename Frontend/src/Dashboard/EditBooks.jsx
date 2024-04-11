@@ -78,7 +78,7 @@ const EditBooks = () => {
     };
 
     //Update the book data
-    fetch(`http://localhost:3000/update-book/${id}`, {
+    fetch(`import.meta.env.VITE_API_URL/update-book/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -1,14 +1,5 @@
 import { useState } from "react";
-import {
-  Button,
-
-  Label,
-  TextInput,
-  Select,
-  Textarea,
-} from "flowbite-react";
-
-
+import { Button, Label, TextInput, Select, Textarea } from "flowbite-react";
 
 const UploadBook = () => {
   const bookCategories = [
@@ -74,7 +65,7 @@ const UploadBook = () => {
       bookPDFURL,
     };
     //Send data to backend
-    fetch("http://localhost:3000/upload-book", {
+    fetch(`${import.meta.env.VITE_API_URL}/upload-book`, {
       method: "POST",
       body: JSON.stringify(bookData),
       headers: {

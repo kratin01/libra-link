@@ -40,7 +40,7 @@ import Logout from "../Components/Logout";
         },{
           path:"/book/:id",
           element:<SingleBook/>,
-          loader: ({params})=> fetch(`http://localhost:3000/book/${params.id}`).then((res)=>res.json())
+          loader: ({params})=> fetch(`import.meta.env.VITE_API_URL/book/${params.id}`).then((res)=>res.json())
         }
       ]
     },
@@ -61,7 +61,7 @@ import Logout from "../Components/Logout";
         },{
           path:"/admin/dashboard/edit-books/:id",
           element:<EditBooks/>,
-          loader: ({params})=> fetch(`http://localhost:3000/book/${params.id}`).then((res)=>res.json())
+          loader: ({params})=> fetch(`import.meta.env.VITE_API_URL/book/${params.id}`).then((res)=>res.json())
           
         }
       ]

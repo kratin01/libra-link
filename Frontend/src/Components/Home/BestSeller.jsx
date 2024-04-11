@@ -7,7 +7,7 @@ import { fadeIn } from "../../variants.js"
 const FavBook = () => {
     const [favBook, setFavBook] = useState([])
     useEffect(() => {
-      fetch("http://localhost:3000/get-books")
+      fetch(`${import.meta.env.VITE_API_URL}/get-books`)
           .then((res) => res.json())
           .then((data) => {
               setFavBook(data).slice(0,7);
