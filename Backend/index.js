@@ -5,7 +5,9 @@ const cors = require("cors");
 const app = express();
 const port = 3000;
 //middleware
-app.use(cors()); //it helps to connect the frontend and backend
+app.use(cors({
+  origin: "http://localhost:5173" // Allow requests only from this origin
+})); //it helps to connect the frontend and backend
 app.use(express.json()); //it helps to read the json data that is coming from the frontend
 
 
