@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "./bannerCard.css";
+import "./bannercard.css";
 import "swiper/css/effect-cards";
 
 // import required modules
@@ -25,9 +25,6 @@ const BannerCard = () => {
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <SwiperSlide></SwiperSlide>
-        {/* <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide> */}
       </Swiper>
     </div>
   );
