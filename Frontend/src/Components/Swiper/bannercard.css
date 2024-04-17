@@ -18,35 +18,35 @@
   }
   
   .banner .swiper-slide:nth-of-type(1) {
-    background-image: url('src/assets/bookimg/book1.jpg');
+    background-image: url('src/assets/book1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .banner .swiper-slide:nth-of-type(2) {
-    background-image: url('src/assets/bookimg/book5.jpg');
+    background-image: url('src/assets/book5.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .banner .swiper-slide:nth-of-type(3) {
-    background-image: url('src/assets/bookimg/book2.jpg');
+    background-image: url('src/assets/book2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .banner .swiper-slide:nth-of-type(4) {
-    background-image: url('src/assets/bookimg/book3.jpg');
+    background-image: url('src/assets/book3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .banner .swiper-slide:nth-of-type(5) {
-    background-image: url('src/assets/bookimg/book6.jpg');
+    background-image: url('src/assets/book6.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
