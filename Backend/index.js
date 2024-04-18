@@ -8,6 +8,7 @@ const port = 3000;
 const allowedOrigins = [
   "https://libra-link-frontend.vercel.app",
   "http://localhost:5173",
+  "https://libra-link-g2j4-k833grgre-kratin01s-projects.vercel.app/",
 ];
 
 app.use(cors({
